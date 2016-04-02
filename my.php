@@ -78,7 +78,7 @@ $row = $statement->fetch();
                         <label for="re_password">確認密碼</label>
                         <input type="password" class="form-control" id="re_password" name="re_password">
                     </div>
-                    <button type="submit" class="btn btn-default">確認</button>
+                    <button type="submit" class="btn btn-default">提交</button>
                 </form>
 
 
@@ -94,6 +94,7 @@ $row = $statement->fetch();
                             仅限png, jpg, 2MB以内
                         </p>
                     </div>
+                    <button type="submit" class="btn btn-default">提交</button>
                 </form>
             <?php } ?>
         </div>
