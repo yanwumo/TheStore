@@ -16,6 +16,11 @@ if ($_POST["title"] == "" || $_POST["price"] == "" ||
     $_POST["quantity"] == "" || $_POST["shipping_type"] == "" ||
     $_POST["shipping_price"] == "" || $_POST["transaction_place"] == "") {
     echo "信息不完整";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 

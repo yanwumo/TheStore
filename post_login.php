@@ -37,6 +37,11 @@ if ($row = $statement->fetch()) {
     }
 } else {
     echo "用户不存在, 请重试. ";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
 }
 ?>
 

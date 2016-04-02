@@ -6,11 +6,21 @@ if (!isset($_POST["username"]) || !isset($_POST["password"]) || !isset($_POST["r
 
 if ($_POST["username"] == "" || $_POST["password"] == "" || $_POST["re_password"] == "" || $_POST["email"] == "" || $_POST["phone"] == "") {
     echo "信息不完整";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 
 if ($_POST["password"] != $_POST["re_password"]) {
     echo "密码不一致";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 

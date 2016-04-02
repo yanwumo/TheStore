@@ -20,18 +20,38 @@ $row = $statement->fetch();
 
 if ($_POST["password"] == "") {
     echo "修改个人资料前请先验证密码.";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 if (md5($_POST["password"]) != $row["password"]) {
     echo "旧密码错误";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 if ($_POST["new_password"] != $_POST["re_password"]) {
     echo "密码不一致";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 if ($_POST["email"] == "" || $_POST["phone"] == "") {
     echo "信息不完整";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
     exit();
 }
 
