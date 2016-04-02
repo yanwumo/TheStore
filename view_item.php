@@ -1,4 +1,13 @@
 <?php require_once("header.php"); ?>
+<?php
+if (!isset($_GET['id'])) exit();
+
+$username = $_SESSION["username"];
+$statement = $dbh->prepare("SELECT * FROM items WHERE id = :id");
+$statement->bindParam(":id", $_GET['id']);
+$statement->execute();
+$row = $statement->fetch();
+?>
 
 <div class="col-md-2">
 </div>
@@ -6,30 +15,33 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5">
-                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-thumbnail" />
+                <img src="img_items/<?php echo $row["picture"]; ?>" class="img-thumbnail" />
             </div>
             <div class="col-md-7">
                 <div class="list-group">
                     <div class="list-group-item">
-                        物品名稱
+                        物品名稱: <?php echo $row["title"]; ?>
                     </div>
                     <div class="list-group-item">
-                        聯絡方式
+                        聯絡方式: <?php echo $row["facebook"]; ?>
                     </div>
                     <div class="list-group-item">
-                        商品價格
+                        商品價格: <?php echo $row["price"]; ?>
                     </div>
                     <div class="list-group-item">
-                        商品數量
+                        商品數量: <?php echo $row["quantity"]; ?>
                     </div>
                     <div class="list-group-item">
-                        運輸方式
+                        運輸方式: <?php echo $row["shipping_type"]; ?>
                     </div>
                     <div class="list-group-item">
-                        運費
+                        運費: <?php echo $row["shipping_price"]; ?>
                     </div>
                     <div class="list-group-item">
-                        交易地點
+                        交易地點: <?php echo $row["transaction_place"]; ?>
+                    </div>
+                    <div class="list-group-item">
+                        發表時間: <?php echo $row["post_time"]; ?>
                     </div>
                 </div>
             </div>
@@ -37,7 +49,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                   備註:這個蘋果是小強媽媽的嫁妝.
+                    <?php echo nl2br($row["content"]); ?>
                 </p>
             </div>
         </div>
