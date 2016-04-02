@@ -186,7 +186,7 @@ if ($total_page > 9) {
         $row = $statement->fetch();
         ?>
         <img style="max-width: 90%; max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
-        你好, <?php echo $_SESSION["username"]; ?>
+        <p>你好, <?php echo $_SESSION["username"]; ?></p>
         <p><a class="btn btn-primary" href="new_item.php">发表商品</a></p>
     <?php } else { ?>
         <form role="form" action="post_login.php" method="post">
