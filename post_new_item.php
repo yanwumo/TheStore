@@ -25,6 +25,7 @@ if ($_POST["title"] == "" || $_POST["price"] == "" ||
 }
 
 // File upload BEGIN
+$file_uploaded = false;
 if ($_FILES["file"]["type"] == "image/png" || $_FILES["file"]["type"] == "image/jpeg" ||
         $_FILES["file"]["type"] == "image/pjpeg") {
     if ($_FILES["file"]["size"] > 2048000) {
