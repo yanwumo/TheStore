@@ -31,6 +31,14 @@ if ($total_page > 9) {
 <div class="col-md-2">
     <div class="list-group">
         <?php
+        // All items
+        if (($category == 0)) {
+            echo '<a href="index.php" class="list-group-item active">所有分类</a>';
+        } else {
+            echo '<a href="index.php" class="list-group-item">所有分类</a>';
+        }
+
+        // Categories
         $statement = $dbh->prepare("SELECT * FROM categories ORDER BY position");
         $statement->execute();
         while ($row = $statement->fetch()) {
