@@ -34,10 +34,10 @@ $_FILES["file"]["type"] == "image/pjpeg") {
         $statement->bindParam(":avatar", $destination_filename);
         $statement->bindParam(":id", $_SESSION["uid"]);
         $statement->execute();
-        echo "发布成功, 3s后自动返回. ";
+        echo "头像上传成功, 3s后自动返回. ";
         ?>
         <script type="text/javascript">
-            setTimeout("window.location.href='index.php'", 3000);
+            setTimeout("window.location.href='my.php'", 3000);
         </script>
         <?php
     }
