@@ -12,8 +12,21 @@ if (!isset($_SESSION["username"])) { ?>
         <form role="form" action="post_new_item.php" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
-                <label for="title">物品名稱</label>
+                <label for="title">商品名稱</label>
                 <input type="text" class="form-control" id="title" name="title" >
+            </div>
+            <div class="form-group">
+                <label for="category">商品分類</label>
+                <select class="form-control" id="category" name="category">
+                    <option value="">----</option>
+                    <?php
+                    $statement = $dbh->prepare("SELECT * FROM categories ORDER BY position");
+                    $statement->execute();
+                    while ($row = $statement->fetch()) {
+                        echo '<option value="' . $row["id"] . '">' . $row["category"] . '</option>';
+                    }
+                    ?>
+                </select>
             </div>
             <div class="form-group">
                 <label for="price">商品價格</label>

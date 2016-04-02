@@ -10,11 +10,12 @@ if (!isset($_SESSION["username"])) { ?>
 if (!isset($_POST["title"]) || !isset($_POST["price"]) || 
     !isset($_POST["quantity"]) || !isset($_POST["shipping_type"]) ||
     !isset($_POST["shipping_price"]) || !isset($_POST["transaction_place"]) ||
-    !isset($_POST["other"])) exit();
+    !isset($_POST["other"]) || !isset($_POST["category"])) exit();
 
 if ($_POST["title"] == "" || $_POST["price"] == "" ||
     $_POST["quantity"] == "" || $_POST["shipping_type"] == "" ||
-    $_POST["shipping_price"] == "" || $_POST["transaction_place"] == "") {
+    $_POST["shipping_price"] == "" || $_POST["transaction_place"] == "" ||
+    $_POST["category"] == "") {
     echo "信息不完整";
     ?>
     <script type="text/javascript">
@@ -60,8 +61,7 @@ $statement->bindParam(":shipping_price", $_POST["shipping_price"]);
 $statement->bindParam(":transaction_place", $_POST["transaction_place"]);
 $statement->bindParam(":other", $_POST["other"]);
 $statement->bindParam(":uid", $_SESSION["uid"]);
-$str_empty = "0";
-$statement->bindParam(":category_id", $str_empty); //temp
+$statement->bindParam(":category_id", $_POST["category"]); //temp
 
 if ($statement->execute()) {
     if ($file_uploaded) {
