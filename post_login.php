@@ -4,7 +4,7 @@
 
 <html>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="5;url=index.php">
+<meta http-equiv="refresh" content="3;url=index.php">
 <body>
 
 <?php
@@ -22,7 +22,7 @@ if ($row = $statement->fetch()) {
         // Password check correct
         session_start();
         $_SESSION["username"] = $username;
-        echo "登录成功. ";
+        echo "登录成功, 3s后自动返回. ";
     } else {
         echo "密码不正确, 请重试. ";
     }
