@@ -73,7 +73,9 @@ if ($total_page > 9) {
                         <h3><?php echo $row["title"]; ?></h3>
                         <p>
                             <?php
-                            if (strlen($row["other"]) <= 12) {
+                            if ($row["other"] == "") {
+                                echo "&nbsp;";
+                            } else if (strlen($row["other"]) <= 12) {
                                 echo $row["other"];
                             } else {
                                 echo mb_substr($row["other"], 0, 11, "utf-8") . "...";
