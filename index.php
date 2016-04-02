@@ -45,7 +45,7 @@ if ($total_page > 9) {
             ?>
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <img style="height: 200px" src="img_items/<?php echo $row["picture"]; ?>" />
+                    <img style="height: 200px" alt="300x200" src="img_items/<?php echo $row["picture"]; ?>" />
                     <div class="caption">
                         <h3><?php echo $row["title"]; ?></h3>
                         <p>暂时先不写内容</p>
