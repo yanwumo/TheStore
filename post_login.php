@@ -22,6 +22,7 @@ if ($row = $statement->fetch()) {
         // Password check correct
         session_start();
         $_SESSION["username"] = $username;
+        $_SESSION["uid"] = $row["id"];
         echo "登录成功, 3s后自动返回. ";
     } else {
         echo "密码不正确, 请重试. ";

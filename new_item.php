@@ -3,7 +3,7 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-        <form role="form" action="post_edit_personal_information.php" method="post">
+        <form role="form" action="post_new_item.php" method="post">
 
             <div class="form-group">
                 <label for="title">物品名稱</label>
@@ -28,6 +28,10 @@
             <div class="form-group">
                 <label for="transaction_place">交易地點</label>
                 <input type="text" class="form-control" id="transaction_place" name="transaction_place">
+            </div>
+            <div class="form-group">
+                <label for="other">其它</label>
+                <textarea id="other" name="other"></textarea>
             </div>
 
             <button type="submit" class="btn btn-default">確認</button>
