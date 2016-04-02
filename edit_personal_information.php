@@ -36,6 +36,10 @@ $statement->execute();
                     <input type="text" class="form-control" id="phone" name="phone">
                 </div>
                 <div class="form-group">
+                    <label for="facebook">Facebook</label>
+                    <input type="text" class="form-control" id="facebook" name="facebook">
+                </div>
+                <div class="form-group">
                     <label for="password">舊密碼</label>
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
