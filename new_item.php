@@ -49,7 +49,7 @@ if (!isset($_SESSION["username"])) { ?>
                 <input type="text" class="form-control" id="transaction_place" name="transaction_place">
             </div>
             <div class="form-group">
-                <label for="other">其它</label>
+                <p><label for="other">其它</label></p>
                 <textarea id="other" name="other" rows="10" cols="40"></textarea>
             </div>
             <div class="form-group">
