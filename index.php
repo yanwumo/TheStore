@@ -144,22 +144,14 @@
                 <div class="col-md-2">
                     <form role="form" action="post_login.php" method="post">
                         <div class="form-group">
-
-                            <label for="username">
-                                用户名
-                            </label>
+                            <label for="username">用户名</label>
                             <input type="email" class="form-control" id="username" name="username">
                         </div>
                         <div class="form-group">
-
-                            <label for="password">
-                                密码
-                            </label>
+                            <label for="password">密码</label>
                             <input type="password" class="form-control" id="password">
                         </div>
-                        <button type="submit" class="btn btn-default">
-                            登录
-                        </button>
+                        <button type="submit" class="btn btn-default">登录</button>
                     </form>
                 </div>
             </div>
