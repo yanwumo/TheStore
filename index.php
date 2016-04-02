@@ -39,7 +39,7 @@ if ($total_page > 9) {
 <div class="col-md-8">
     <div class="row">
         <?php
-        $statement = $dbh->prepare("SELECT * FROM items LIMIT $lower_bound, $items_per_page");
+        $statement = $dbh->prepare("SELECT * FROM items ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
         $statement->execute();
         while ($row = $statement->fetch()) {
             ?>
