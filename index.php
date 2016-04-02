@@ -35,9 +35,9 @@ if ($total_page > 9) {
         $statement->execute();
         while ($row = $statement->fetch()) {
             if (($category == $row["id"])) {
-                echo '<a href="index.php?category=' . $row["id"] . 'class="list-group-item active">' . $row["category"] . '</a>';
+                echo '<a href="index.php?category=' . $row["id"] . '" class="list-group-item active">' . $row["category"] . '</a>';
             } else {
-                echo '<a href="index.php?category=' . $row["id"] . 'class="list-group-item">' . $row["category"] . '</a>';
+                echo '<a href="index.php?category=' . $row["id"] . '" class="list-group-item">' . $row["category"] . '</a>';
             }
         }
         ?>
