@@ -62,7 +62,7 @@ session_start();
                                     <li class="divider">
                                     </li>
                                     <li>
-                                        <a href="#">登出</a>
+                                        <a href="logout.php">登出</a>
                                     </li>
                                 </ul>
                             </li>
