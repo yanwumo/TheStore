@@ -86,7 +86,7 @@ $row = $statement->fetch();
                 <form role="form" action="post_edit_avatar.php" method="post" enctype="multipart/form-data">
                     <img style="max-width: 200px; max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
                     <div class="form-group">
-                        <label for="upload">
+                        <label for="file">
                             File input
                         </label>
                         <input type="file" id="file" name="file" />

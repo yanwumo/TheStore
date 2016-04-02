@@ -50,10 +50,10 @@ if (!isset($_SESSION["username"])) { ?>
             </div>
             <div class="form-group">
                 <label for="other">其它</label>
-                <textarea id="other" name="other"></textarea>
+                <textarea id="other" name="other" rows="10" cols="40"></textarea>
             </div>
             <div class="form-group">
-                <label for="upload">
+                <label for="file">
                     File input
                 </label>
                 <input type="file" id="file" name="file" />
