@@ -54,7 +54,11 @@ if ($total_page > 9) {
 <div class="col-md-8">
     <div class="row">
         <?php
-        $statement = $dbh->prepare("SELECT * FROM items ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
+        if ($category == 0) {
+            $statement = $dbh->prepare("SELECT * FROM items ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
+        } else {
+            $statement = $dbh->prepare("SELECT * FROM items WHERE category_id = $category ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
+        }
         $statement->execute();
         while ($row = $statement->fetch()) {
             ?>
