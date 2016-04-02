@@ -31,7 +31,6 @@
                     <div class="list-group-item">
                         交易地點
                     </div>
-
                 </div>
             </div>
         </div>

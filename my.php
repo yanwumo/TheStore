@@ -4,6 +4,7 @@ $username = $_SESSION["username"];
 $statement = $dbh->prepare("SELECT * FROM users WHERE name = :name");
 $statement->bindParam(":name", $username);
 $statement->execute();
+$row = $statement->fetch();
 ?>
 
 <div class="col-md-2">
@@ -27,18 +28,17 @@ $statement->execute();
 
                 <div class="list-group">
                     <div class="list-group-item">
-                        姓名
+                        用戶名: <?php echo $row["name"]; ?>
                     </div>
                     <div class="list-group-item">
-                        電話
+                        電話: <?php echo $row["phone"]; ?>
                     </div>
                     <div class="list-group-item">
-                        電子信箱
+                        電子信箱: <?php echo $row["email"]; ?>
                     </div>
                     <div class="list-group-item">
-                       facebook
+                        Facebook: <a href="<?php echo $row["facebook_homepage"]; ?>">这里应该是名字</a>
                     </div>
-
                 </div>
 
 
