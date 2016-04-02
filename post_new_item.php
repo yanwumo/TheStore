@@ -1,15 +1,10 @@
 <?php
-session_start();
-require_once("pdo_init.php");
-if (!isset($_SESSION["username"])) header("Location: index.php");
-?>
-
-<!DOCTYPE html>
-
-<html>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="3;url=index.php">
-<body>
+require_once("header.php");
+if (!isset($_SESSION["username"])) { ?>
+    <script type="text/javascript">
+        window.location.href='index.php';
+    </script>
+<?php } ?>
 
 <?php
 if (!isset($_POST["title"]) || !isset($_POST["price"]) || 
@@ -45,5 +40,4 @@ if ($statement->execute()) {
 }
 ?>
 
-</body>
-</html>
+<?php require_once("footer.php"); ?>

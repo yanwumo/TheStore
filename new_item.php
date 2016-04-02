@@ -1,8 +1,10 @@
 <?php
-session_start();
-if (!isset($_SESSION["username"])) header("Location: index.php");
 require_once("header.php");
-?>
+if (!isset($_SESSION["username"])) { ?>
+    <script type="text/javascript">
+        window.location.href='index.php';
+    </script>
+<?php } ?>
 
     <div class="col-md-2">
     </div>

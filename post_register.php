@@ -1,11 +1,4 @@
-<?php require_once("pdo_init.php"); ?>
-
-<!DOCTYPE html>
-
-<html>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="3;url=index.php">
-<body>
+<?php require_once("header.php"); ?>
 
 <?php
 if (!isset($_POST["username"]) || !isset($_POST["password"]) || !isset($_POST["re_password"]) ||
@@ -33,13 +26,11 @@ $statement->bindParam(":email", $email);
 $statement->bindParam(":phone", $phone);
 
 if ($statement->execute()) {
-    session_start();
-    $_SESSION["username"] = $username;
     echo "注册成功, 3s后自动返回. ";
+    echo "<script type='text/javascript'>window.location.href='index.php'</script>";
 } else {
     echo "用户名已存在. ";
 }
 ?>
 
-</body>
-</html>
+<?php require_once("footer.php"); ?>

@@ -1,11 +1,10 @@
-<?php require_once("pdo_init.php"); ?>
-
-<!DOCTYPE html>
-
-<html>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="3;url=index.php">
-<body>
+<?php
+require_once("header.php");
+if (!isset($_SESSION["username"])) { ?>
+    <script type="text/javascript">
+        window.location.href='index.php';
+    </script>
+<?php } ?>
 
 <?php
 if (!isset($_POST["username"]) || !isset($_POST["password"])) exit();
@@ -24,13 +23,22 @@ if ($row = $statement->fetch()) {
         $_SESSION["username"] = $username;
         $_SESSION["uid"] = $row["id"];
         echo "登录成功, 3s后自动返回. ";
+        ?>
+        <script type="text/javascript">
+            setTimeout("window.location.href='index.php'", 3000);
+        </script>
+    <?php
     } else {
         echo "密码不正确, 请重试. ";
+        ?>
+        <script type="text/javascript">
+            setTimeout("window.history.back()", 3000);
+        </script>
+    <?php
     }
 } else {
     echo "用户不存在, 请重试. ";
 }
 ?>
 
-</body>
-</html>
+<?php require_once("footer.php"); ?>

@@ -1,14 +1,10 @@
 <?php
-session_start();
-if (!isset($_SESSION["username"])) header("Location: index.php");
-?>
-
-<!DOCTYPE html>
-
-<html>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="3;url=index.php">
-<body>
+require_once("header.php");
+if (!isset($_SESSION["username"])) { ?>
+    <script type="text/javascript">
+        window.location.href='index.php';
+    </script>
+<?php } ?>
 
 <?php
 if (!isset($_POST["password"]) || !isset($_POST["new_password"]) ||
@@ -55,6 +51,3 @@ if ($statement->execute()) {
     echo "未知错误";
 }
 ?>
-
-</body>
-</html>
