@@ -50,7 +50,7 @@ if (!isset($_SESSION["username"])) { ?>
             </div>
             <div class="form-group">
                 <p><label for="other">其它</label></p>
-                <textarea id="other" name="other" rows="10" cols="40"></textarea>
+                <textarea id="other" name="other" rows="10" cols="80"></textarea>
             </div>
             <div class="form-group">
                 <label for="file">
