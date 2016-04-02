@@ -15,10 +15,10 @@ $statement->execute();
                 <li <?php if (!isset($_GET["page"]) || $_GET["page"] == 1) echo 'class="active"'; ?>>
                     <a href="my.php?page=1">個人資料</a>
                 </li>
-                <li <?php if ($_GET["page"] == 2) echo 'class="active"'; ?>>
+                <li <?php if (isset($_GET["page"]) && $_GET["page"] == 2) echo 'class="active"'; ?>>
                     <a href="my.php?page=2">修改資料</a>
                 </li>
-                <li <?php if ($_GET["page"] == 3) echo 'class="active"'; ?>>
+                <li <?php if (isset($_GET["page"]) && $_GET["page"] == 3) echo 'class="active"'; ?>>
                     <a href="my.php?page=3">修改頭像</a>
                 </li>
 
