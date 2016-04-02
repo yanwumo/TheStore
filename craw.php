@@ -3,6 +3,7 @@ require_once("pdo_init.php");
 
 $title = $_POST["title"];
 $content = $_POST["content"];
+print_r($content);
 $post_id = $_POST["post_id"];
 $facebook_name = $_POST["facebook_name"];
 $picture = $_POST["picture"];
