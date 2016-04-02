@@ -35,8 +35,18 @@ $statement->bindParam(":category_id", $str_empty); //temp
 
 if ($statement->execute()) {
     echo "发布成功, 3s后自动返回. ";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.location.href='index.php'", 3000);
+    </script>
+    <?php
 } else {
     echo "错误, 请检查. ";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
 }
 ?>
 

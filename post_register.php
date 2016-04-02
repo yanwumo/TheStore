@@ -27,9 +27,18 @@ $statement->bindParam(":phone", $phone);
 
 if ($statement->execute()) {
     echo "注册成功, 3s后自动返回. ";
-    echo "<script type='text/javascript'>window.location.href='index.php'</script>";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.location.href='index.php'", 3000);
+    </script>
+    <?php
 } else {
     echo "用户名已存在. ";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
 }
 ?>
 

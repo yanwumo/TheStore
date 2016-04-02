@@ -47,7 +47,17 @@ $statement->bindParam(":phone", $_POST["phone"]);
 $statement->bindParam(":facebook", $_POST["facebook"]);
 if ($statement->execute()) {
     echo "修改个人资料成功";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.location.href='my.php'", 3000);
+    </script>
+    <?php
 } else {
-    echo "未知错误";
+    echo "错误, 请检查. ";
+    ?>
+    <script type="text/javascript">
+        setTimeout("window.history.back()", 3000);
+    </script>
+    <?php
 }
 ?>
