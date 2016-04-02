@@ -49,7 +49,7 @@ if ($total_page > 9) {
                     <div class="caption">
                         <h3><?php echo $row["title"]; ?></h3>
                         <p>暂时先不写内容</p>
-                        <p><a class="btn btn-primary" href="view_item.php">查看详情</a></p>
+                        <p><a class="btn btn-primary" href="view_item.php?id=<?php echo $row["id"]; ?>">查看详情</a></p>
                     </div>
                 </div>
             </div>
