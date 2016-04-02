@@ -5,8 +5,6 @@ $category = isset($_GET["category"]) ? $_GET["category"] : 0;
 
 if ($category == 0) {
     $statement = $dbh->prepare("SELECT COUNT(*) FROM items");
-} else if ($category == -1) {
-    $statement = $dbh->prepare("SELECT COUNT(*) FROM facebook_items");
 } else {
     $statement = $dbh->prepare("SELECT COUNT(*) FROM items WHERE category_id = $category");
 }
@@ -37,11 +35,7 @@ if ($total_page > 9) {
 <div class="col-md-2">
     <div class="list-group">
         <?php
-        if (($category == -1)) {
-            echo '<a href="index.php?category=-1" class="list-group-item active">From Facebook</a>';
-        } else {
-            echo '<a href="index.php?category=-1" class="list-group-item">From Facebook</a>';
-        }
+            echo '<a href="from_facebook.php" class="list-group-item">From Facebook</a>';
         // All items
         if (($category == 0)) {
             echo '<a href="index.php" class="list-group-item active">所有分类</a>';
@@ -67,8 +61,6 @@ if ($total_page > 9) {
         <?php
         if ($category == 0) {
             $statement = $dbh->prepare("SELECT * FROM items ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
-        } else if ($category == -1) {
-            $statement = $dbh->prepare("SELECT * FROM facebook_items ORDER BY id DESC LIMIT $lower_bound, $items_per_page");
         } else {
             $statement = $dbh->prepare("SELECT * FROM items WHERE category_id = $category ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
         }
