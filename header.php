@@ -56,7 +56,7 @@ require_once("pdo_init.php");
                                         <a href="#">我的收藏</a>
                                     </li>
                                     <li>
-                                        <a href="#">后台管理</a>
+                                        <a href="admin/admin.php">后台管理</a>
                                     </li>
                                     <li class="divider">
                                     </li>
