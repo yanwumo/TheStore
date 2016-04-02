@@ -6,8 +6,10 @@ $statement->bindParam(":name", $username);
 $statement->execute();
 ?>
 
+<!--
 <div class="col-md-2">
 </div>
+-->
 <div class="col-md-8">
     <form role="form" action="post_login.php" method="post">
         <div class="form-group">
@@ -28,7 +30,9 @@ $statement->execute();
         <button type="submit" class="btn btn-default">登录</button>
     </form>
 </div>
+<!--
 <div class="col-md-2">
 </div>
+-->
 
 <?php require_once("footer.php"); ?>
