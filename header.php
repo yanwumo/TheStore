@@ -74,12 +74,3 @@ session_start();
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <div class="page-header">
-                <h1>
-                    The Store <small>Interface Builder for Bootstrap</small>
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="row">
