@@ -121,232 +121,89 @@
                 <div class="col-md-7">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="jumbotron">
-                                        <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                        <h2>
-                                            這是一個mac電腦
-                                        </h2>
-                                        <p>
-                                            This is a template for a simple marketing or informational website.
-                                        </p>
-                                        <p>
-                                            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-
                         </div>
                         <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="jumbotron">
-                                        <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                        <h2>
-                                            這是一杯綠茶甜甜的
-                                        </h2>
-                                        <p>
-                                            This is a template for a simple marketing or informational website.
-                                        </p>
-                                        <p>
-                                            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-
                         </div>
                         <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="jumbotron">
-                                        <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                        <h2>
-                                            這是一個iphone 5s
-                                        </h2>
-                                        <p>
-                                            This is a template for a simple marketing or informational website.
-                                        </p>
-                                        <p>
-                                            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一個muji鉛筆盒
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一把吉他來自大西洋彼岸的男人
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一台筆電牌子我看不清楚
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一頭豬
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                每個程序猿都應該像我一樣
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一個人在游泳
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一個花花的紙杯子
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一瓶可口可樂
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="jumbotron">
-                                            <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-                                            <h2>
-                                                這是一個草莓夾心酥
-                                            </h2>
-                                            <p>
-                                                This is a template for a simple marketing or informational website.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                        </div>
+                        <div class="col-md-4">
+                            <div class="jumbotron">
+                                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+                                <p>這是一杯綠茶甜甜的</p>
+                                <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p>
                             </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
