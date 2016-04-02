@@ -68,7 +68,7 @@ if ($total_page > 9) {
         if ($category == 0) {
             $statement = $dbh->prepare("SELECT * FROM items ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
         } else if ($category == -1) {
-            $statement = $dbh->prepare("SELECT * FROM facebook_items DESC LIMIT $lower_bound, $items_per_page");
+            $statement = $dbh->prepare("SELECT * FROM facebook_items ORDER BY id DESC LIMIT $lower_bound, $items_per_page");
         } else {
             $statement = $dbh->prepare("SELECT * FROM items WHERE category_id = $category ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
         }
