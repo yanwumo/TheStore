@@ -24,6 +24,25 @@ $statement->execute();
 
             </ul>
             <?php if (!isset($_GET["page"]) || $_GET["page"] == 1) { ?>
+
+                <div class="list-group">
+                    <div class="list-group-item">
+                        姓名
+                    </div>
+                    <div class="list-group-item">
+                        電話
+                    </div>
+                    <div class="list-group-item">
+                        電子信箱
+                    </div>
+                    <div class="list-group-item">
+                       facebook
+                    </div>
+
+                </div>
+
+
+            <?php } else if ($_GET["page"] == 2) { ?>
                 <form role="form" action="post_login.php" method="post">
                     <div class="form-group">
                         用户名: <?php echo $username; ?>
@@ -54,8 +73,10 @@ $statement->execute();
                     </div>
                     <button type="submit" class="btn btn-default">確認</button>
                 </form>
-            <?php } else if ($_GET["page"] == 2) { ?>
+
+
             <?php } else if ($_GET["page"] == 3) { ?>
+
             <?php } ?>
         </div>
     </div>
