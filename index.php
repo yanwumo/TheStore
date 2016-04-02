@@ -3,7 +3,11 @@
 $page = isset($_GET["page"]) && $_GET["page"] >= 1 ? $_GET["page"] : 1;
 $category = isset($_GET["category"]) ? $_GET["category"] : 0;
 
-$statement = $dbh->prepare("SELECT COUNT(*) FROM items");
+if ($category == 0) {
+    $statement = $dbh->prepare("SELECT COUNT(*) FROM items");
+} else {
+    $statement = $dbh->prepare("SELECT COUNT(*) FROM items WHERE category_id = $category");
+}
 $statement->execute();
 $row = $statement->fetch();
 $items_per_page = 12;
