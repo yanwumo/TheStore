@@ -26,7 +26,7 @@ if ($_POST["password"] == "") {
     echo "修改个人资料前请先验证密码.";
     exit();
 }
-if ($_POST["password"] != $row["password"]) {
+if (md5($_POST["password"]) != $row["password"]) {
     echo "旧密码错误";
     exit();
 }
@@ -41,7 +41,11 @@ if ($_POST["email"] == "" || $_POST["phone"] == "") {
 
 $statement = $dbh->prepare("UPDATE users SET password = :password, email = :email, phone = :phone, facebook_homepage = :facebook WHERE name = :name");
 $statement->bindParam(":name", $username);
-$statement->bindParam(":password", md5($_POST["new_password"]));
+if ($_POST["new_password"] == "") {
+    $statement->bindParam(":password", $row["password"]);
+} else {
+    $statement->bindParam(":password", md5($_POST["new_password"]));
+}
 $statement->bindParam(":email", $_POST["email"]);
 $statement->bindParam(":phone", $_POST["phone"]);
 $statement->bindParam(":facebook", $_POST["facebook"]);
