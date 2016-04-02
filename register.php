@@ -1,15 +1,9 @@
 <?php require_once("header.php"); ?>
-<?php
-$username = $_SESSION["username"];
-$statement = $dbh->prepare("SELECT * FROM users WHERE name = :name");
-$statement->bindParam(":name", $username);
-$statement->execute();
-?>
 
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-        <form role="form" action="post_login.php" method="post">
+        <form role="form" action="post_register.php" method="post">
             <div class="form-group">
                 <label for="name">姓名</label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -23,7 +17,7 @@ $statement->execute();
                 <input type="text" class="form-control" id="phone" name="phone">
             </div>
             <div class="form-group">
-                <label for="facebook">facebook</label>
+                <label for="facebook">Facebook</label>
                 <input type="text" class="form-control" id="facebook" name="facebook">
             </div>
             <div class="form-group">

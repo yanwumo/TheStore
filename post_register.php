@@ -8,10 +8,10 @@
 <body>
 
 <?php
-if (!isset($_POST["username"]) || !isset($_POST["password"]) ||
+if (!isset($_POST["username"]) || !isset($_POST["password"]) || !isset($_POST["re_password"]) ||
     !isset($_POST["email"]) || !isset($_POST["phone"])) exit();
 
-if ($_POST["username"] == "" || $_POST["password"] == "" || $_POST["email"] == "" || $_POST["phone"] == "") {
+if ($_POST["username"] == "" || $_POST["password"] == "" || $_POST["re_password"] == "" || $_POST["email"] == "" || $_POST["phone"] == "") {
     echo "信息不完整";
     exit();
 }

@@ -235,9 +235,10 @@
         </div>
         <div class="form-group">
             <label for="password">密码</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" id="password" name="password">
         </div>
         <button type="submit" class="btn btn-default">登录</button>
+        <button type="button" href="register.php" class="btn btn-default">注册</button>
     </form>
 </div>
 
