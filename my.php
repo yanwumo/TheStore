@@ -32,7 +32,7 @@ $row = $statement->fetch();
 
             </ul>
             <?php if (!isset($_GET["page"]) || $_GET["page"] == 1) { ?>
-                <img style="max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
+                <img style="max-height: 80%; max-width: 80%" src="img_avatars/<?php echo $row["avatar"]; ?>" />
                 <div class="list-group">
                     <div class="list-group-item">
                         用戶名: <?php echo $row["name"]; ?>
