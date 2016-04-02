@@ -10,7 +10,7 @@ if (!isset($_SESSION["username"])) { ?>
 if (!isset($_POST["title"]) || !isset($_POST["price"]) || 
     !isset($_POST["quantity"]) || !isset($_POST["shipping_type"]) ||
     !isset($_POST["shipping_price"]) || !isset($_POST["transaction_place"]) ||
-    !isset($_POST["other"]) || !isset($_POST["file"])) exit();
+    !isset($_POST["other"])) exit();
 
 if ($_POST["title"] == "" || $_POST["price"] == "" ||
     $_POST["quantity"] == "" || $_POST["shipping_type"] == "" ||
