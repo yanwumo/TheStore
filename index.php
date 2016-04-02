@@ -1,6 +1,7 @@
 <?php require_once("header.php"); ?>
 <?php
 $page = isset($_GET["page"]) && $_GET["page"] >= 1 ? $_GET["page"] : 1;
+$category = isset($_GET["category"]) ? $_GET["category"] : 0;
 
 $statement = $dbh->prepare("SELECT COUNT(*) FROM items");
 $statement->execute();
@@ -29,11 +30,17 @@ if ($total_page > 9) {
 
 <div class="col-md-2">
     <div class="list-group">
-        <a href="#" class="list-group-item active">Home</a>
-        <a href="#" class="list-group-item">Home</a>
-        <a href="#" class="list-group-item">Home</a>
-        <a href="#" class="list-group-item">Home</a>
-        <a href="#" class="list-group-item">Home</a>
+        <?php
+        $statement = $dbh->prepare("SELECT * FROM categories ORDER BY position");
+        $statement->execute();
+        while ($row = $statement->fetch()) {
+            if (($category == $row["id"])) {
+                echo '<a href="index.php?category=' . $row["id"] . 'class="list-group-item active">' . $row["category"] . '</a>';
+            } else {
+                echo '<a href="index.php?category=' . $row["id"] . 'class="list-group-item">' . $row["category"] . '</a>';
+            }
+        }
+        ?>
     </div>
 </div>
 <div class="col-md-8">
