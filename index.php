@@ -228,18 +228,22 @@
 </div>
 
 <div class="col-md-2">
-    <form role="form" action="post_login.php" method="post">
-        <div class="form-group">
-            <label for="username">用户名</label>
-            <input type="email" class="form-control" id="username" name="username">
-        </div>
-        <div class="form-group">
-            <label for="password">密码</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
-        <button type="submit" class="btn btn-default">登录</button>
-        <button type="button" onclick="window.location.href='register.php'" class="btn btn-default">注册</button>
-    </form>
+    <?php if (isset($_SESSION["username"])) { ?>
+        你好, <?php echo $_SESSION["username"]; ?>
+    <?php } else { ?>
+        <form role="form" action="post_login.php" method="post">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="email" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-default">登录</button>
+            <button type="button" onclick="window.location.href='register.php'" class="btn btn-default">注册</button>
+        </form>
+    <?php } ?>
 </div>
 
 <?php require_once("footer.php"); ?>
