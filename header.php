@@ -1,6 +1,5 @@
 <?php
 require_once("pdo_init.php");
-session_start();
 ?>
 
 <!DOCTYPE html>
