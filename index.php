@@ -329,6 +329,17 @@ if ($total_page > 9) {
                     }
                 }
                 ?>
+
+                <!-- Next Page -->
+                <?php if ($page < $total_page) { ?>
+                    <li>
+                        <a href="<?php substr($_SERVER['PHP_SELF'], strrpos($_SERVER['PHP_SELF'], '/') + 1); ?>?page=<?php echo $page + 1; ?>&category=<?php echo $category; ?>">&raquo;</a>
+                    </li>
+                <?php } else { ?>
+                    <li class="disabled">
+                        <a>&raquo;</a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
