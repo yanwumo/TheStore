@@ -38,9 +38,9 @@ if ($total_page > 9) {
     <div class="list-group">
         <?php
         if (($category == -1)) {
-            echo '<a href="index.php" class="list-group-item active">From Facebook</a>';
+            echo '<a href="index.php?category=-1" class="list-group-item active">From Facebook</a>';
         } else {
-            echo '<a href="index.php" class="list-group-item">From Facebook</a>';
+            echo '<a href="index.php?category=-1" class="list-group-item">From Facebook</a>';
         }
         // All items
         if (($category == 0)) {
