@@ -1,4 +1,6 @@
-<?php require_once("pdo_init.php"); ?>
+<?php
+if (!isset($_SESSION["username"])) header("Location: index.php");
+?>
 
 <!DOCTYPE html>
 
@@ -20,7 +22,7 @@ if ($_POST["title"] == "" || $_POST["price"] == "" ||
     exit();
 }
 
-$statement = $dbh->prepare("INSERT INTO items (title, price, quantity, shipping_type, shipping_price, transaction_place, other, uid, post_time, picture) VALUES (:title, :price, :quantity, :shipping_type, :shipping_price, :transaction_place, :other, :uid, NOW(), :picture)");
+$statement = $dbh->prepare("INSERT INTO items (title, price, quantity, shipping_type, shipping_price, transaction_place, other, uid, post_time, picture, category_id) VALUES (:title, :price, :quantity, :shipping_type, :shipping_price, :transaction_place, :other, :uid, NOW(), :picture, :category_id)");
 $statement->bindParam(":title", $_POST["title"]);
 $statement->bindParam(":price", $_POST["price"]);
 $statement->bindParam(":quantity", $_POST["quantity"]);
@@ -31,6 +33,8 @@ $statement->bindParam(":other", $_POST["other"]);
 $statement->bindParam(":uid", $_SESSION["uid"]);
 $str_empty = "";
 $statement->bindParam(":picture", $str_empty); //temp
+$str_empty = "0";
+$statement->bindParam(":category_id", $str_empty); //temp
 
 if ($statement->execute()) {
     echo "发布成功, 3s后自动返回. ";

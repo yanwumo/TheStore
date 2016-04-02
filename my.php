@@ -1,4 +1,7 @@
-<?php require_once("header.php"); ?>
+<?php
+if (!isset($_SESSION["username"])) header("Location: index.php");
+require_once("header.php");
+?>
 <?php
 $username = $_SESSION["username"];
 $statement = $dbh->prepare("SELECT * FROM users WHERE name = :name");

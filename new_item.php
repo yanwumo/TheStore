@@ -1,4 +1,7 @@
-<?php require_once("header.php"); ?>
+<?php
+if (!isset($_SESSION["username"])) header("Location: index.php");
+require_once("header.php");
+?>
 
     <div class="col-md-2">
     </div>
