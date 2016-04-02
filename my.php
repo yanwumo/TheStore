@@ -8,8 +8,8 @@ if (!isset($_SESSION["username"])) { ?>
 
 <?php
 $username = $_SESSION["username"];
-$statement = $dbh->prepare("SELECT * FROM users WHERE name = :name");
-$statement->bindParam(":name", $username);
+$statement = $dbh->prepare("SELECT * FROM users WHERE id = :id");
+$statement->bindParam(":id", $_SESSION["uid"]);
 $statement->execute();
 $row = $statement->fetch();
 ?>
@@ -32,7 +32,7 @@ $row = $statement->fetch();
 
             </ul>
             <?php if (!isset($_GET["page"]) || $_GET["page"] == 1) { ?>
-
+                <img style="max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
                 <div class="list-group">
                     <div class="list-group-item">
                         用戶名: <?php echo $row["name"]; ?>
@@ -83,7 +83,18 @@ $row = $statement->fetch();
 
 
             <?php } else if ($_GET["page"] == 3) { ?>
-
+                <form role="form" action="post_edit_avatar.php" method="post" enctype="multipart/form-data">
+                    <img style="max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
+                    <div class="form-group">
+                        <label for="upload">
+                            File input
+                        </label>
+                        <input type="file" id="file" name="file" />
+                        <p class="help-block">
+                            仅限png, jpg, 2MB以内
+                        </p>
+                    </div>
+                </form>
             <?php } ?>
         </div>
     </div>

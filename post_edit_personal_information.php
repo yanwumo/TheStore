@@ -81,3 +81,5 @@ if ($statement->execute()) {
     <?php
 }
 ?>
+
+<?php require_once("footer.php"); ?>
