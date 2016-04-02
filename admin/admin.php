@@ -1,4 +1,4 @@
-<?php require_once("../header.php"); ?>
+<?php require_once("header.php"); ?>
 
     <div class="col-md-2">
         <ul class="nav nav-stacked nav-pills">
@@ -24,4 +24,4 @@
     </div>
 
 
-<?php require_once("../footer.php"); ?>
+<?php require_once("footer.php"); ?>
