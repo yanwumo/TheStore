@@ -9,7 +9,7 @@ if (!isset($_SESSION["username"])) { ?>
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-        <form role="form" action="post_new_item.php" method="post">
+        <form role="form" action="post_new_item.php" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="title">物品名稱</label>
@@ -38,6 +38,15 @@ if (!isset($_SESSION["username"])) { ?>
             <div class="form-group">
                 <label for="other">其它</label>
                 <textarea id="other" name="other"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="upload">
+                    File input
+                </label>
+                <input type="file" id="file" name="file" />
+                <p class="help-block">
+                    仅限png, jpg, gif, 2MB以内
+                </p>
             </div>
 
             <button type="submit" class="btn btn-default">確認</button>
