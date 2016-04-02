@@ -12,13 +12,13 @@ $statement->execute();
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-tabs">
-                <li class="active">
+                <li <?php if (!isset($_GET["page"]) || $_GET["page"] == 1) echo 'class="active"'; ?>>
                     <a href="my.php?page=1">個人資料</a>
                 </li>
-                <li>
+                <li <?php if ($_GET["page"] == 2) echo 'class="active"'; ?>>
                     <a href="my.php?page=2">修改資料</a>
                 </li>
-                <li>
+                <li <?php if ($_GET["page"] == 3) echo 'class="active"'; ?>>
                     <a href="my.php?page=3">修改頭像</a>
                 </li>
 
