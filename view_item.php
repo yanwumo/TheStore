@@ -1,6 +1,6 @@
-<?php require_once("header.php"); ?>
 <?php
 if (!isset($_GET['id'])) exit();
+require_once("header.php");
 
 $username = $_SESSION["username"];
 $statement = $dbh->prepare("SELECT * FROM items WHERE id = :id");
