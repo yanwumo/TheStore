@@ -76,7 +76,7 @@ if ($total_page > 9) {
                             if (strlen($row["other"]) <= 12) {
                                 echo $row["other"];
                             } else {
-                                echo substr($row["other"], 0, 11) . "...";
+                                echo mb_substr($row["other"], 0, 11, "utf-8") . "...";
                             }
                             ?>
                         </p>
