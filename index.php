@@ -225,6 +225,7 @@
             </ul>
         </div>
     </div>
+</div>
 
 <div class="col-md-2">
     <form role="form" action="post_login.php" method="post">
