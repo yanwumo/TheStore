@@ -2,14 +2,14 @@
 <?php
 $page = isset($_GET["page"]) && $_GET["page"] >= 1 ? $_GET["page"] : 1;
 
-$statement = $dbh->prepare("SELECT COUNT(*) FROM goods");
+$statement = $dbh->prepare("SELECT COUNT(*) FROM items");
 $statement->execute();
 $row = $statement->fetch();
-$goods_per_page = 12;
-$total_goods = $row["COUNT(*)"];
-$total_page = ceil($total_goods / $goods_per_page);
+$items_per_page = 12;
+$total_items = $row["COUNT(*)"];
+$total_page = ceil($total_items / $items_per_page);
 if ($total_page == 0) $total_page = 1;
-$lower_bound = ($page - 1) * $goods_per_page;
+$lower_bound = ($page - 1) * $items_per_page;
 if ($total_page > 9) {
     $need = true;
     $need_left = false;
@@ -39,13 +39,13 @@ if ($total_page > 9) {
 <div class="col-md-8">
     <div class="row">
         <?php
-        $statement = $dbh->prepare("SELECT * FROM goods LIMIT $lower_bound, $goods_per_page");
+        $statement = $dbh->prepare("SELECT * FROM items LIMIT $lower_bound, $items_per_page");
         $statement->execute();
         while ($row = $statement->fetch()) {
             ?>
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <img src="img_goods/<?php echo $row["picture"]; ?>" />
+                    <img src="img_items/<?php echo $row["picture"]; ?>" />
                     <div class="caption">
                         <h3><?php echo $row["title"]; ?></h3>
                         <p>暂时先不写内容</p>
