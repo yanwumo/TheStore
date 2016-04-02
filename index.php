@@ -39,7 +39,7 @@ if ($total_page > 9) {
 <div class="col-md-8">
     <div class="row">
         <?php
-        $statement = $dbh->prepare("SELECT * FROM goods LIMIT ($lower_bound, $goods_per_page)");
+        $statement = $dbh->prepare("SELECT * FROM goods LIMIT $lower_bound, $goods_per_page");
         $statement->execute();
         while ($row = $statement->fetch()) {
             ?>
