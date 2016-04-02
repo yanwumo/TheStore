@@ -9,7 +9,7 @@
                 <a href="users.php">用戶列表</a>
             </li>
             <li>
-                <a href="goods.php">商品列表</a>
+                <a href="items.php">商品列表</a>
             </li>
             <li>
                 <a href="categories.php">分類管理</a>
