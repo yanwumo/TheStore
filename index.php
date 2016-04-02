@@ -30,24 +30,10 @@
                 <div class="col-md-2">
                     <div class="list-group">
                         <a href="#" class="list-group-item active">Home</a>
-                        <div>
-                            產品3c
-                        </div>
-                        <div>
-                            <br>
-                            <div>
-                                <div class="list-group-item">
-                                    <h4 class="list-group-item-heading">
-                                        食物
-                                    </h4>
-                                    <p class="list-group-item-text">
-                                    </p>
-                                </div>
-                                <div class="list-group-item">
-                                    <span class="badge">14</span>Help
-                                </div> <a class="list-group-item active"><span class="badge">14</span>Help</a>
-                            </div>
-                        </div>
+                        <a href="#" class="list-group-item">Home</a>
+                        <a href="#" class="list-group-item">Home</a>
+                        <a href="#" class="list-group-item">Home</a>
+                        <a href="#" class="list-group-item">Home</a>
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -92,8 +78,6 @@
                                 <span>這是一台筆電牌子我看不清楚</span>
                             </p>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-4">
                             <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
                             <p>
@@ -112,8 +96,6 @@
                                 這是一個人在游泳
                             </p>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-4">
                             <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
                             <p>
@@ -131,6 +113,33 @@
                             <p>
                                 這是一個草莓夾心酥
                             </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#">Prev</a>
+                                </li>
+                                <li>
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li>
+                                    <a href="#">Next</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -154,33 +163,6 @@
                             登录
                         </button>
                     </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#">Prev</a>
-                        </li>
-                        <li>
-                            <a href="#">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li>
-                            <a href="#">4</a>
-                        </li>
-                        <li>
-                            <a href="#">5</a>
-                        </li>
-                        <li>
-                            <a href="#">Next</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
