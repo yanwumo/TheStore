@@ -15,6 +15,7 @@ $password = md5($_POST["password"]);
 
 $statement = $dbh->prepare("SELECT * FROM users WHERE name = :name");
 $statement->bindParam(":name", $username);
+$statement->execute();
 
 if ($row = $statement->fetch()) {
     if ($row["password"] == $password) {
