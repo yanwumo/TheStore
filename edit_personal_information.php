@@ -18,10 +18,10 @@ $statement->execute();
                 <li>
                     <a href="#">修改資料</a>
                 </li>
-                <li class="disabled">
+                <li>
                     <a href="#">修改頭像</a>
                 </li>
-                
+
             </ul>
             <form role="form" action="post_login.php" method="post">
                 <div class="form-group">
