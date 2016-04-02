@@ -38,192 +38,24 @@ if ($total_page > 9) {
 </div>
 <div class="col-md-8">
     <div class="row">
-
+        <?php
+        $statement = $dbh->prepare("SELECT * FROM goods LIMIT ($lower_bound, $goods_per_page)");
+        $statement->execute();
+        while ($row = $statement->fetch()) {
+            ?>
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
+                    <img src="img_goods/<?php echo $row["picture"]; ?>" />
                     <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>這是一杯綠茶甜甜的</p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
+                        <h3><?php echo $row["title"]; ?></h3>
+                        <p>暂时先不写内容</p>
+                        <p><a class="btn btn-primary" href="#">查看详情</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>這是一杯綠茶甜甜的</p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>這是一杯綠茶甜甜的</p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>這是一杯綠茶甜甜的</p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg" />
-                    <div class="caption">
-                        <h3>
-                            這是一杯綠茶甜甜的
-                        </h3>
-                        <p>
-                            這是一杯綠茶甜甜的
-                        </p>
-                        <p>
-                            <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
+            <?php
+        }
+        ?>
     </div>
     <div class="row">
         <div class="col-md-12">
