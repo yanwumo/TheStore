@@ -231,7 +231,7 @@ if ($total_page > 9) {
                 <!-- Prev Page -->
                 <?php if ($page == 1) { ?>
                     <li class="disabled">
-                        &laquo;
+                        <a>&laquo;</a>
                     </li>
                 <?php } else { ?>
                     <li>
