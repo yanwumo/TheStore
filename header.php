@@ -42,10 +42,10 @@
                             Submit
                         </button>
                     </form>
-                    <?php if (isset($_SESSION["username"])) { ?>
+                    <?php if (isset($_SESSION['username'])) { ?>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION["username"]; ?><strong class="caret"></strong></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['username']; ?><strong class="caret"></strong></a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="#">个人资料</a>

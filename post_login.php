@@ -21,7 +21,7 @@ if ($row = $statement->fetch()) {
     if ($row["password"] == $password) {
         // Password check correct
         session_start();
-        $_SESSION["username"] = $username;
+        $_SESSION['username'] = $username;
         echo "登录成功. ";
     } else {
         echo "密码不正确, 请重试. ";
