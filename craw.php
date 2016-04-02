@@ -1,16 +1,20 @@
 <?php
 require_once("pdo_init.php");
 
-$createtime = date("Y-m-d H:i:s" ,strtotime( $_POST["createtime"] ));
+$title = $_POST["title"];
+$content = $_POST["content"];
+$post_id = $_POST["post_id"];
+$facebook_name = $_POST["facebook_name"];
+$picture = $_POST["picture"];
+$price = $_POST["price"];
+$facebook_id = $_POST["facebook_id"];
 
-$statement = $dbh->prepare("INSERT INTO items (title, price, quantity, shipping_type, shipping_price, transaction_place, other, uid, post_time, picture, category_id) VALUES (:title, :price, :quantity, :shipping_type, :shipping_price, :transaction_place, :other, 0, :post_time, :picture, -1)");
-$statement->bindValue(":title", $_POST["title"]);
-$statement->bindValue(":price", $_POST["price"]);
-$statement->bindValue(":quantity", $_POST["quantity"]);
-$statement->bindValue(":shipping_type", $_POST["shipping_type"]);
-$statement->bindValue(":shipping_price", $_POST["shipping_price"]);
-$statement->bindValue(":transaction_place", $_POST["transaction_place"]);
-$statement->bindValue(":other", $_POST["other"]);
-$statement->bindValue(":post_time", $createtime);
-$statement->bindValue(":picture", $_POST["picture"]);
+$statement = $dbh->prepare("INSERT INTO facebook_items (title, content, post_id, facebook_name, picture, price, facebook_id) VALUES (:title, :content, :post_id, :facebook_name, :picture, :price, :facebook_id)");
+$statement->bindValue(":title", $title);
+$statement->bindValue(":content", $content);
+$statement->bindValue(":post_id", $post_id);
+$statement->bindValue(":facebook_name", $facebook_name);
+$statement->bindValue(":picture", $picture);
+$statement->bindValue(":price", $price);
+$statement->bindValue(":facebook_id", $facebook_id);
 $statement->execute();
