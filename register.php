@@ -6,7 +6,7 @@
         <form role="form" action="post_register.php" method="post">
             <div class="form-group">
                 <label for="name">姓名</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
                 <label for="password">密码</label>
