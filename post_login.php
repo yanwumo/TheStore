@@ -8,10 +8,7 @@
 <body>
 
 <?php
-if (!isset($_POST["username"]) || !isset($_POST["password"])) {
-    echo "ERROR!";
-    exit();
-}
+if (!isset($_POST["username"]) || !isset($_POST["password"])) exit();
 
 $username = $_POST["username"];
 $password = md5($_POST["password"]);
