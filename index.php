@@ -179,6 +179,13 @@ if ($total_page > 9) {
 
 <div class="col-md-2">
     <?php if (isset($_SESSION["username"])) { ?>
+        <?php
+        $statement = $dbh->prepare("SELECT * FROM users WHERE id = :id");
+        $statement->bindParam(":id", $_SESSION["uid"]);
+        $statement->execute();
+        $row = $statement->fetch();
+        ?>
+        <img style="max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
         你好, <?php echo $_SESSION["username"]; ?>
         <p><a class="btn btn-primary" href="new_item.php">发表商品</a></p>
     <?php } else { ?>
