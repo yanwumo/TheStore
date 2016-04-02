@@ -49,7 +49,7 @@ $row = $statement->fetch();
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    <?php echo nl2br($row["content"]); ?>
+                    <?php echo nl2br($row["other"]); ?>
                 </p>
             </div>
         </div>
