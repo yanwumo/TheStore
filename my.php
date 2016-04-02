@@ -43,21 +43,21 @@ $row = $statement->fetch();
 
 
             <?php } else if ($_GET["page"] == 2) { ?>
-                <form role="form" action="post_login.php" method="post">
+                <form role="form" action="post_edit_personal_information.php" method="post">
                     <div class="form-group">
                         用户名: <?php echo $username; ?>
                     </div>
                     <div class="form-group">
                         <label for="email">電子信箱</label>
-                        <input type="text" class="form-control" id="email" name="email">
+                        <input type="text" class="form-control" id="email" name="email" value="<?php echo $row["email"]; ?>">
                     </div>
                     <div class="form-group">
                         <label for="phone">電話</label>
-                        <input type="text" class="form-control" id="phone" name="phone">
+                        <input type="text" class="form-control" id="phone" name="phone" value="<?php echo $row["phone"]; ?>">
                     </div>
                     <div class="form-group">
                         <label for="facebook">Facebook</label>
-                        <input type="text" class="form-control" id="facebook" name="facebook">
+                        <input type="text" class="form-control" id="facebook" name="facebook" value="<?php echo $row["facebook_homepage"]; ?>">
                     </div>
                     <div class="form-group">
                         <label for="password">舊密碼</label>
