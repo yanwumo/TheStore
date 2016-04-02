@@ -71,7 +71,15 @@ if ($total_page > 9) {
                     <img style="width: auto; height: 200px;" src="img_items/<?php echo $row["picture"]; ?>" />
                     <div class="caption">
                         <h3><?php echo $row["title"]; ?></h3>
-                        <p>暂时先不写内容</p>
+                        <p>
+                            <?php
+                            if (strlen($row["other"]) <= 12) {
+                                echo $row["other"];
+                            } else {
+                                echo substr($row["other"], 0, 11) . "...";
+                            }
+                            ?>
+                        </p>
                         <p><a class="btn btn-primary" href="view_item.php?id=<?php echo $row["id"]; ?>">查看详情</a></p>
                     </div>
                 </div>
