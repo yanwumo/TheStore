@@ -43,7 +43,7 @@
 
 
         // Query
-        $statement = $dbh->prepare("SELECT * FROM items ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
+        $statement = $dbh->prepare("SELECT * FROM users ORDER BY post_time DESC LIMIT $lower_bound, $items_per_page");
         $statement->execute();
         while ($row = $statement->fetch()) {
             ?>
