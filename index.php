@@ -180,6 +180,7 @@ if ($total_page > 9) {
 <div class="col-md-2">
     <?php if (isset($_SESSION["username"])) { ?>
         你好, <?php echo $_SESSION["username"]; ?>
+        <p><a class="btn btn-primary" href="new_item.php">发表商品</a></p>
     <?php } else { ?>
         <form role="form" action="post_login.php" method="post">
             <div class="form-group">
