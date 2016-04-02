@@ -5,7 +5,7 @@ $category = isset($_GET["category"]) ? $_GET["category"] : 0;
 
 if ($category == 0) {
     $statement = $dbh->prepare("SELECT COUNT(*) FROM items");
-} else if ($category == 1) {
+} else if ($category == -1) {
     $statement = $dbh->prepare("SELECT COUNT(*) FROM facebook_items");
 } else {
     $statement = $dbh->prepare("SELECT COUNT(*) FROM items WHERE category_id = $category");
