@@ -32,7 +32,7 @@ $row = $statement->fetch();
 
             </ul>
             <?php if (!isset($_GET["page"]) || $_GET["page"] == 1) { ?>
-                <img style="max-height: 80%; max-width: 80%" src="img_avatars/<?php echo $row["avatar"]; ?>" />
+                <img style="max-width: 200px; max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
                 <div class="list-group">
                     <div class="list-group-item">
                         用戶名: <?php echo $row["name"]; ?>
@@ -84,7 +84,7 @@ $row = $statement->fetch();
 
             <?php } else if ($_GET["page"] == 3) { ?>
                 <form role="form" action="post_edit_avatar.php" method="post" enctype="multipart/form-data">
-                    <img style="max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
+                    <img style="max-width: 200px; max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
                     <div class="form-group">
                         <label for="upload">
                             File input
