@@ -5,21 +5,21 @@
 <div class="col-md-8">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-thumbnail" />
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <div class="list-group">
                     <div class="list-group-item">
                         物品名稱
                     </div>
                     <div class="list-group-item">
-                        Facebook
+                        聯絡方式
                     </div>
                     <div class="list-group-item">
                         商品價格
                     </div>
-                    <<div class="list-group-item">
+                    <div class="list-group-item">
                         商品數量
                     </div>
                     <div class="list-group-item">
