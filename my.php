@@ -44,7 +44,7 @@ $row = $statement->fetch();
                         電子信箱: <?php echo $row["email"]; ?>
                     </div>
                     <div class="list-group-item">
-                        Facebook: <a href="<?php echo $row["facebook_homepage"]; ?>">这里应该是名字</a>
+                        Facebook: <a href="<?php echo $row["facebook_homepage"]; ?>"><?php echo $row["facebook_homepage"]; ?></a>
                     </div>
                 </div>
 
