@@ -47,7 +47,7 @@ if ($total_page > 9) {
     <div class="col-md-8">
         <div class="row">
             <?php
-            $statement = $dbh->prepare("SELECT * FROM facebook_items ORDER BY id DESC LIMIT $lower_bound, $items_per_page");
+            $statement = $dbh->prepare("SELECT * FROM facebook_items ORDER BY id LIMIT $lower_bound, $items_per_page");
             $statement->execute();
             while ($row = $statement->fetch()) {
                 ?>
