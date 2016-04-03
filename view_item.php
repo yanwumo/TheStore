@@ -56,7 +56,7 @@ $row = $statement->fetch();
         <div class="row">
             <div class="list-group">
                 <?php
-                $statement = $dbh->prepare("SELECT (SELECT name FROM users WHERE users.id = uid), content FROM replies WHERE post_id = :id");
+                $statement = $dbh->prepare("SELECT (SELECT name FROM users WHERE users.id = uid) AS name, content FROM replies WHERE post_id = :id");
                 $statement->bindValue(":id", $_GET['id']);
                 $statement->execute();
                 while ($row = $statement->fetch()) {
