@@ -45,7 +45,7 @@ require_once("pdo_init.php");
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION["username"]; ?><strong class="caret"></strong></a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="my.php">个人资料</a>
+                                        <a href="my.php">個人資料</a>
                                     </li>
                                     <li>
                                         <a href="#">我的收藏</a>
