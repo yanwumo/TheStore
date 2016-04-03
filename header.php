@@ -12,6 +12,7 @@ require_once("pdo_init.php");
     <title>The Store</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="search_advice.js"></script>
 
 </head>
 <body>
@@ -36,6 +37,11 @@ require_once("pdo_init.php");
                             Submit
                         </button>
                     </form>
+                    <div class="search_suggest" id="searchsuggest">
+                        <ul>
+
+                        </ul>
+                    </div>
                     <?php if (isset($_SESSION["username"])) { ?>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
