@@ -1,6 +1,8 @@
 <?php
 require_once("pdo_init.php");
 
+if ($_POST["picture"] == "") exit();
+
 $content = $_POST["content"];
 $post_id = $_POST["post_id"];
 $facebook_name = $_POST["facebook_name"];
