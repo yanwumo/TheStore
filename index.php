@@ -38,9 +38,9 @@ if ($total_page > 9) {
             echo '<a href="from_facebook.php" class="list-group-item">From Facebook</a>';
         // All items
         if (($category == 0)) {
-            echo '<a href="index.php" class="list-group-item active">所有分类</a>';
+            echo '<a href="index.php" class="list-group-item active">所有分類</a>';
         } else {
-            echo '<a href="index.php" class="list-group-item">所有分类</a>';
+            echo '<a href="index.php" class="list-group-item">所有分類</a>';
         }
 
         // Categories
@@ -81,7 +81,7 @@ if ($total_page > 9) {
                             }
                             ?>
                         </p>
-                        <p><a class="btn btn-primary" href="view_item.php?id=<?php echo $row["id"]; ?>">查看详情</a></p>
+                        <p><a class="btn btn-primary" href="view_item.php?id=<?php echo $row["id"]; ?>">查看詳情</a></p>
                     </div>
                 </div>
             </div>

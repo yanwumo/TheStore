@@ -52,7 +52,7 @@ require_once("pdo_init.php");
                                     </li>
                                     <?php if ($_SESSION["privilege"] == 1) { ?>
                                         <li>
-                                            <a href="admin/admin.php">后台管理</a>
+                                            <a href="admin/admin.php">後台管理</a>
                                         </li>
                                     <?php } ?>
                                     <li class="divider">

@@ -91,7 +91,7 @@ $row = $statement->fetch();
                         </label>
                         <input type="file" id="file" name="file" />
                         <p class="help-block">
-                            仅限png, jpg, 2MB以内
+                            僅限png, jpg, 2MB以內
                         </p>
                     </div>
                     <button type="submit" class="btn btn-default">提交</button>

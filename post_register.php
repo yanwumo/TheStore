@@ -5,7 +5,7 @@ if (!isset($_POST["username"]) || !isset($_POST["password"]) || !isset($_POST["r
     !isset($_POST["email"]) || !isset($_POST["phone"])) exit();
 
 if ($_POST["username"] == "" || $_POST["password"] == "" || $_POST["re_password"] == "" || $_POST["email"] == "" || $_POST["phone"] == "") {
-    echo "信息不完整";
+    echo "資料不完整";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -15,7 +15,7 @@ if ($_POST["username"] == "" || $_POST["password"] == "" || $_POST["re_password"
 }
 
 if ($_POST["password"] != $_POST["re_password"]) {
-    echo "密码不一致";
+    echo "密碼不一致";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -36,14 +36,14 @@ $statement->bindParam(":email", $email);
 $statement->bindParam(":phone", $phone);
 
 if ($statement->execute()) {
-    echo "注册成功, 3s后自动返回. ";
+    echo "註冊成功, 3s後自動返回. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.location.href='index.php'", 3000);
     </script>
     <?php
 } else {
-    echo "用户名已存在. ";
+    echo "用戶名已存在. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);

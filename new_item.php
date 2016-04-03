@@ -58,7 +58,7 @@ if (!isset($_SESSION["username"])) { ?>
                 </label>
                 <input type="file" id="file" name="file" />
                 <p class="help-block">
-                    仅限png, jpg, 2MB以内
+                    僅限png, jpg, 2MB以内
                 </p>
             </div>
 

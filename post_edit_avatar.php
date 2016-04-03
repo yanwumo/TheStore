@@ -11,7 +11,7 @@ if (!isset($_SESSION["username"])) {
 if ($_FILES["file"]["type"] == "image/png" || $_FILES["file"]["type"] == "image/jpeg" ||
 $_FILES["file"]["type"] == "image/pjpeg") {
     if ($_FILES["file"]["size"] > 2048000) {
-    echo "文件大小超过限制";
+    echo "文件大小超過限制";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -34,7 +34,7 @@ $_FILES["file"]["type"] == "image/pjpeg") {
         $statement->bindParam(":avatar", $destination_filename);
         $statement->bindParam(":id", $_SESSION["uid"]);
         $statement->execute();
-        echo "头像上传成功, 3s后自动返回. ";
+        echo "頭像上傳成功, 3s後自動返回. ";
         ?>
         <script type="text/javascript">
             setTimeout("window.location.href='my.php'", 3000);
