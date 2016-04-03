@@ -1,3 +1,19 @@
+.price {
+    padding-right: 3px;
+    width: 80px;
+    height: 30px;
+    background-color: #EB5055;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    color: #FFF;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    overflow: visible;
+}
+
 .text-overflow {
     display: block;
     overflow: hidden;

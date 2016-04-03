@@ -53,6 +53,7 @@ if ($total_page > 9) {
                 ?>
                 <div class="col-md-4">
                     <div class="thumbnail">
+                        <div class="price"><?php echo "NT$" . htmlentities($row["price"]); ?></div>
                         <img style="width: auto; height: 200px;" src="<?php echo $row["picture"]; ?>" />
                         <div class="caption">
                             <h3 class="text-overflow"><?php echo $row["title"]; ?>&nbsp;</h3>
