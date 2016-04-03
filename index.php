@@ -220,18 +220,18 @@ if ($total_page > 9) {
         ?>
         <img style="max-width: 90%; max-height: 200px" src="img_avatars/<?php echo $row["avatar"]; ?>" />
         <p>你好, <?php echo $_SESSION["username"]; ?></p>
-        <p><a class="btn btn-primary" href="new_item.php">发表商品</a></p>
+        <p><a class="btn btn-primary" href="new_item.php">發表商品</a></p>
     <?php } else { ?>
         <form role="form" action="post_login.php" method="post">
             <div class="form-group">
-                <label for="username">用户名</label>
+                <label for="username">用戶名</label>
                 <input type="text" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
-                <label for="password">密码</label>
+                <label for="password">密碼</label>
                 <input type="password" class="form-control" id="password" name="password">
             </div>
-            <button type="submit" class="btn btn-default">登录</button>
+            <button type="submit" class="btn btn-default">登錄</button>
             <button type="button" onclick="window.location.href='register.php'" class="btn btn-default">注册</button>
         </form>
     <?php } ?>
