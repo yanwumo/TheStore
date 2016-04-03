@@ -70,16 +70,14 @@ if ($total_page > 9) {
             <div class="col-md-4">
                 <div class="thumbnail">
                     <img style="width: auto; height: 200px;" src="img_items/<?php echo $row["picture"]; ?>" />
-                    <div class="caption">
-                        <h3 style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"><?php echo $row["title"]; ?></h3>
+                    <div class="caption" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <h3><?php echo $row["title"]; ?></h3>
                         <p>
                             <?php
                             if ($row["other"] == "") {
                                 echo "&nbsp;";
-                            } else if (strlen($row["other"]) <= 12) {
+                            } else  {
                                 echo $row["other"];
-                            } else {
-                                echo mb_substr($row["other"], 0, 11, "utf-8") . "...";
                             }
                             ?>
                         </p>
