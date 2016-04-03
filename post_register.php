@@ -31,7 +31,7 @@ $phone = $_POST["phone"];
 
 $statement = $dbh->prepare("INSERT INTO users (name, password, email, phone) VALUES (:name, :password, :email, :phone)");
 $statement->bindParam(":name", $username);
-$statement->bindParam(":password", md5($password));
+$statement->bindParam(":password", $password);
 $statement->bindParam(":email", $email);
 $statement->bindParam(":phone", $phone);
 
