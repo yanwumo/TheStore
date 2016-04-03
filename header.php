@@ -99,8 +99,8 @@ require_once("pdo_init.php");
                                 suggestWrap.find('ul').html('<li>您要找的是不是:</li>');
                                 for (var i = 0; i < data.length; i++) {
                                     a=document.createElement('A');
-                                    a.href="./showItemDetail.php?id="+data[i].id;
-                                    a.innerHTML=data[i].goodsname;
+                                    a.href="./view_item.php?id="+data[i].id;
+                                    a.innerHTML=data[i].title;
                                     li = document.createElement('LI');
                                     li.appendChild(a);
                                     tmpFrag.appendChild(li);
@@ -128,7 +128,7 @@ require_once("pdo_init.php");
                             };
                             $.ajax({
                                 type: "GET",
-                                url: "http://www.nthuhw.com/searchAdvice.php",
+                                url: "./search_advice.php",
                                 async: true,
                                 data: obj,
                                 dataType: "json",
@@ -136,7 +136,7 @@ require_once("pdo_init.php");
                                     var aData = [];
                                     for (var i = 0; i < data.length; i++) {
                                         var dataobj={};
-                                        dataobj.goodsname=data[i]["goodsname"];
+                                        dataobj.title=data[i]["title"];
                                         dataobj.id=data[i]["id"];
                                         aData.push(dataobj);
                                     }
