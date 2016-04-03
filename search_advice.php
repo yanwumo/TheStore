@@ -23,4 +23,3 @@ if(isset($_GET["keyword"]) and $_GET["keyword"]!=""){
 
     }
 }
-echo "TEST";
