@@ -14,9 +14,6 @@
             <li>
                 <a href="categories.php">分類管理</a>
             </li>
-            <li>
-                <a href="chart.php">數據統計</a>
-            </li>
         </ul>
     </div>
     <div class="col-md-10">
