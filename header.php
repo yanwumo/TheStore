@@ -29,7 +29,7 @@ require_once("pdo_init.php");
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="form-group">
+                    <div class="nav navbar-nav form-group">
                         <input type="text" id="searchtext" class="form-control" placeholder="搜尋你想要的..." />
                     </div>
                     <div class="search_suggest" id="searchsuggest">
