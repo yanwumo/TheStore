@@ -51,7 +51,7 @@ function SearchSuggest(searchFuc) {
     };
     init();
 }
-var searchSuggest = new SearchSuggest(sendKeyWordToBack);
+var searchSuggest;
 function sendKeyWordToBack(keyword) {
     var obj = {
         "keyword": keyword
@@ -73,4 +73,7 @@ function sendKeyWordToBack(keyword) {
             searchSuggest.dataDisplay(aData);
         }
     });
+}
+window.onload = function () {
+    searchSuggest = new SearchSuggest(sendKeyWordToBack);
 }
