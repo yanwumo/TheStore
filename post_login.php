@@ -17,6 +17,7 @@ if ($row = $statement->fetch()) {
         // Password check correct
         $_SESSION["username"] = $username;
         $_SESSION["uid"] = $row["id"];
+        $_SESSION["privilege"] = $row["privilege"];
         echo "登录成功, 3s后自动返回. ";
         ?>
         <script type="text/javascript">
