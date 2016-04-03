@@ -22,7 +22,7 @@ $row = $statement->fetch();
                             物品名稱: <?php echo $row["title"]; ?>
                         </div>
                         <div class="list-group-item">
-                            聯絡方式: <a href="https://www.facebook.com/<?php echo $row["facebook_id"]; ?>"><?php echo $row["facebook_name"]; ?></a>
+                            聯絡方式: <a href="https://www.facebook.com/<?php echo $row["facebook_id"]; ?>" target="_blank"><?php echo $row["facebook_name"]; ?></a>
                         </div>
                         <div class="list-group-item">
                             商品價格: <?php echo $row["price"]; ?>
