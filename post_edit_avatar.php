@@ -29,6 +29,7 @@ $_FILES["file"]["type"] == "image/pjpeg") {
         exit();
     } else {
         $destination_filename = $_SESSION["uid"] . "." . pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
+        if (file_exists("img_avatars/" . $destination_filename)) unlink("img_avatars/" . $destination_filename);
         move_uploaded_file($_FILES["file"]["tmp_name"], "img_avatars/" . $destination_filename);
         $statement = $dbh->prepare("UPDATE users SET avatar = :avatar WHERE id = :id");
         $statement->bindParam(":avatar", $destination_filename);
