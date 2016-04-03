@@ -55,7 +55,7 @@ if ($total_page > 9) {
                     <div class="thumbnail">
                         <img style="width: auto; height: 200px;" src="<?php echo $row["picture"]; ?>" />
                         <div class="caption">
-                            <h3><?php echo $row["title"]; ?></h3>
+                            <h3 style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"><?php echo $row["title"]; ?></h3>
                             <p>&nbsp;</p>
                             <p><a class="btn btn-primary" href="view_item.php?id=<?php echo $row["id"]; ?>">查看详情</a></p>
                         </div>
