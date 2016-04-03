@@ -57,7 +57,7 @@ if ($total_page > 9) {
                         <div class="caption">
                             <h3 class="text-overflow"><?php echo $row["title"]; ?>&nbsp;</h3>
                             <p>&nbsp;</p>
-                            <p><a class="btn btn-primary" href="view_item.php?id=<?php echo $row["id"]; ?>">查看详情</a></p>
+                            <p><a class="btn btn-primary" href="view_facebook_item.php?id=<?php echo $row["id"]; ?>">查看详情</a></p>
                         </div>
                     </div>
                 </div>
