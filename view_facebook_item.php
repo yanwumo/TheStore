@@ -14,7 +14,7 @@ $row = $statement->fetch();
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-5">
-                    <img src="<?php echo $row["picture"]; ?>" class="img-thumbnail" />
+                    <img style="width: 80%; height: auto;" src="<?php echo $row["picture"]; ?>" class="img-thumbnail" />
                 </div>
                 <div class="col-md-7">
                     <div class="list-group">
