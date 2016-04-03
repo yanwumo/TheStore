@@ -10,7 +10,7 @@ if (!isset($_SESSION["username"])) { ?>
 if (!isset($_GET["postid"]) || !isset($_POST["content"])) exit();
 
 if ($_POST["content"] == "") {
-    echo "信息不完整";
+    echo "資料不完整";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -26,14 +26,14 @@ $statement->bindParam(":uid", $_SESSION["uid"]);
 $statement->bindParam(":content", $_POST["content"]);
 
 if ($statement->execute()) {
-    echo "发布成功, 3s后自动返回. ";
+    echo "發布成功, 3s後自動返回. ";
     ?>
     <script type="text/javascript">
         setTimeout("document.location = document.referrer", 3000);
     </script>
     <?php
 } else {
-    echo "错误, 请检查. ";
+    echo "錯誤, 請檢查. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);

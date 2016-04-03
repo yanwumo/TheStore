@@ -16,7 +16,7 @@ if ($_POST["title"] == "" || $_POST["price"] == "" ||
     $_POST["quantity"] == "" || $_POST["shipping_type"] == "" ||
     $_POST["shipping_price"] == "" || $_POST["transaction_place"] == "" ||
     $_POST["category"] == "") {
-    echo "信息不完整";
+    echo "資料不完整";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -30,7 +30,7 @@ $file_uploaded = false;
 if ($_FILES["file"]["type"] == "image/png" || $_FILES["file"]["type"] == "image/jpeg" ||
         $_FILES["file"]["type"] == "image/pjpeg") {
     if ($_FILES["file"]["size"] > 2048000) {
-        echo "文件大小超过限制";
+        echo "檔案大小超過限制";
         ?>
         <script type="text/javascript">
             setTimeout("window.history.back()", 3000);
@@ -76,14 +76,14 @@ if ($statement->execute()) {
         $statement->execute();
     }
 
-    echo "发布成功, 3s后自动返回. ";
+    echo "發布成功, 3s後自動返回. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.location.href='index.php'", 3000);
     </script>
     <?php
 } else {
-    echo "错误, 请检查. ";
+    echo "錯誤, 請檢查. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);

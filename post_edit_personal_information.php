@@ -19,7 +19,7 @@ $row = $statement->fetch();
 
 
 if ($_POST["password"] == "") {
-    echo "修改个人资料前请先验证密码.";
+    echo "修改個人資料前,請先驗證密碼.";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -28,7 +28,7 @@ if ($_POST["password"] == "") {
     exit();
 }
 if (md5($_POST["password"]) != $row["password"]) {
-    echo "旧密码错误";
+    echo "舊密碼錯誤";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -37,7 +37,7 @@ if (md5($_POST["password"]) != $row["password"]) {
     exit();
 }
 if ($_POST["new_password"] != $_POST["re_password"]) {
-    echo "密码不一致";
+    echo "密碼不一致";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);
@@ -66,14 +66,14 @@ $statement->bindParam(":email", $_POST["email"]);
 $statement->bindParam(":phone", $_POST["phone"]);
 $statement->bindParam(":facebook", $_POST["facebook"]);
 if ($statement->execute()) {
-    echo "修改个人资料成功";
+    echo "修改個人資料成功";
     ?>
     <script type="text/javascript">
         setTimeout("window.location.href='my.php'", 3000);
     </script>
     <?php
 } else {
-    echo "错误, 请检查. ";
+    echo "錯誤, 請檢查. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);

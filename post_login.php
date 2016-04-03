@@ -18,14 +18,14 @@ if ($row = $statement->fetch()) {
         $_SESSION["username"] = $username;
         $_SESSION["uid"] = $row["id"];
         $_SESSION["privilege"] = $row["privilege"];
-        echo "登录成功, 3s后自动返回. ";
+        echo "登錄成功, 3s後自動返回. ";
         ?>
         <script type="text/javascript">
             setTimeout("window.location.href='index.php'", 3000);
         </script>
     <?php
     } else {
-        echo "密码不正确, 请重试. ";
+        echo "密碼不正確, 請重試. ";
         ?>
         <script type="text/javascript">
             setTimeout("window.history.back()", 3000);
@@ -33,7 +33,7 @@ if ($row = $statement->fetch()) {
     <?php
     }
 } else {
-    echo "用户不存在, 请重试. ";
+    echo "用戶不存在, 請重試. ";
     ?>
     <script type="text/javascript">
         setTimeout("window.history.back()", 3000);

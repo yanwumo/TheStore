@@ -9,11 +9,11 @@
                 <input type="text" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
-                <label for="password">密码</label>
+                <label for="password">密碼</label>
                 <input type="password" class="form-control" id="password" name="password">
             </div>
             <div class="form-group">
-                <label for="re_password">確認密码</label>
+                <label for="re_password">確認密碼</label>
                 <input type="password" class="form-control" id="re_password" name="re_password">
             </div>
             <div class="form-group">
