@@ -224,7 +224,7 @@ if ($total_page > 9) {
         <form role="form" action="post_login.php" method="post">
             <div class="form-group">
                 <label for="username">用户名</label>
-                <input type="email" class="form-control" id="username" name="username">
+                <input type="text" class="form-control" id="username" name="username">
             </div>
             <div class="form-group">
                 <label for="password">密码</label>
