@@ -1,10 +1,6 @@
 <?php
 require_once("header.php");
-if (!isset($_SESSION["username"])) { ?>
-    <script type="text/javascript">
-        window.location.href='index.php';
-    </script>
-<?php } ?>
+?>
 
 <?php
 if (!isset($_POST["username"]) || !isset($_POST["password"])) exit();
