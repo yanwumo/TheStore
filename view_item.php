@@ -7,7 +7,7 @@ $statement->bindParam(":id", $_GET['id']);
 $statement->execute();
 $row = $statement->fetch();
 ?>
-<div class="row">
+
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
@@ -52,38 +52,40 @@ $row = $statement->fetch();
                 </p>
             </div>
         </div>
-    </div>
 
+        <div class="row">
+            <div class="list-group">
+                <?php
+                $statement = $dbh->prepare("SELECT (SELECT name FROM users WHERE users.id = uid), content FROM replies WHERE post_id = :id");
+                $statement->bindValue(":id", $_GET['id']);
+                $statement->execute();
+                while ($row = $statement->fetch()) {
+                    ?>
+                    <div class="list-group-item">
+                        <?php echo $row["name"]; ?>: <?php echo $row["content"]; ?>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
+
+        <div class="row">
+            <form role="form" action="post_reply.php?postid=<?php echo $_GET['id']; ?>" method="post">
+                <div class="form-group">
+                    <p><label for="content">回應</label></p>
+                    <textarea id="content" name="content" rows="10" cols="80"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">確認</button>
+            </form>
+        </div>
+    </div>
 </div>
 <div class="col-md-2">
 </div>
-</div>
 
-<div class="row">
-    <div class="list-group">
-        <?php
-        $statement = $dbh->prepare("SELECT (SELECT name FROM users WHERE users.id = uid), content FROM replies WHERE post_id = :id");
-        $statement->bindValue(":id", $_GET['id']);
-        $statement->execute();
-        while ($row = $statement->fetch()) {
-            ?>
-            <div class="list-group-item">
-                <?php echo $row["name"]; ?>: <?php echo $row["content"]; ?>
-            </div>
-            <?php
-        }
-        ?>
-    </div>
-</div>
 
-<div class="row">
-    <form role="form" action="post_reply.php?postid=<?php echo $_GET['id']; ?>" method="post">
-        <div class="form-group">
-            <p><label for="content">回應</label></p>
-            <textarea id="content" name="content" rows="10" cols="80"></textarea>
-        </div>
-        <button type="submit" class="btn btn-default">確認</button>
-    </form>
-</div>
+
+
 
 <?php require_once("footer.php"); ?>
