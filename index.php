@@ -70,9 +70,9 @@ if ($total_page > 9) {
             <div class="col-md-4">
                 <div class="thumbnail">
                     <img style="width: auto; height: 200px;" src="img_items/<?php echo $row["picture"]; ?>" />
-                    <div class="caption" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        <h3><?php echo $row["title"]; ?></h3>
-                        <p>
+                    <div class="caption">
+                        <h3 class="text-overflow"><?php echo $row["title"]; ?></h3>
+                        <p class="text-overflow">
                             <?php
                             if ($row["other"] == "") {
                                 echo "&nbsp;";
