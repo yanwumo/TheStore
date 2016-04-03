@@ -2,7 +2,7 @@
 if (!isset($_GET['id'])) exit();
 require_once("header.php");
 
-$statement = $dbh->prepare("SELECT * FROM items WHERE id = :id");
+$statement = $dbh->prepare("SELECT (SELECT email, phone FROM users WHERE id = :id), * FROM items WHERE id = :id");
 $statement->bindParam(":id", $_GET['id']);
 $statement->execute();
 $row = $statement->fetch();
@@ -22,7 +22,7 @@ $row = $statement->fetch();
                         物品名稱: <?php echo $row["title"]; ?>
                     </div>
                     <div class="list-group-item">
-                        聯絡方式: <?php echo $row["facebook"]; ?>
+                        聯絡方式: <?php echo $row["email"] . " " . $row["phone"]; ?>
                     </div>
                     <div class="list-group-item">
                         商品價格: <?php echo $row["price"]; ?>
