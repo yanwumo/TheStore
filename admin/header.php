@@ -37,7 +37,7 @@ require_once("../pdo_init.php");
                                         <a href="../my.php">個人資料</a>
                                     </li>
                                     <li>
-                                        <a href="#">我的收藏</a>
+                                        <a href="../my_items.php">商品管理</a>
                                     </li>
                                     <?php if ($_SESSION["privilege"] == 1) { ?>
                                         <li>
