@@ -7,7 +7,7 @@ class Item{
 }
 if(isset($_GET["keyword"]) and $_GET["keyword"]!=""){
     $keyword=$_GET["keyword"];
-    $statement = $dbh->prepare("SELECT id, title FROM items WHERE title LIKE '%$keyword%' OR other LIKE '%$keyword%' UNION SELECT id, title FROM facebook_items WHERE title LIKE '%$keyword%' OR other LIKE '%$keyword%' LIMIT 0, 12");
+    $statement = $dbh->prepare("SELECT id, title FROM items WHERE title LIKE '%$keyword%' OR other LIKE '%$keyword%' UNION SELECT id, title FROM facebook_items WHERE title LIKE '%$keyword%' OR content LIKE '%$keyword%' LIMIT 0, 12");
     $data = array();
     if ($statement->execute()) {
         while ($row = $statement->fetch()) {
@@ -23,3 +23,4 @@ if(isset($_GET["keyword"]) and $_GET["keyword"]!=""){
 
     }
 }
+echo "TEST";
